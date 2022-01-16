@@ -14,7 +14,7 @@ const minimums = computed(() => store.state.minimums);
   <div v-if="!loadingStatus" class="overflow-x-scroll my-20px text-[#463931]">
     <div class="flex">
       <div v-for="(day,index) in forecastInfo" :key="index"
-           class="flex flex-col p-5px bg-[#FDFDFD] flex-grow-0 flex-shrink-0 basis-70px justify-center items-center py-15px">
+           class="flex flex-col p-5px bg-[#FDFDFD] flex-grow-0 flex-shrink-0 basis-70px justify-center items-center pt-15px">
         <div v-if="index===0" class="font-light text=[#D0D7DD]">今天</div>
         <div v-else class="font-light">{{ nextDays[index][1] }}</div>
         <div class="font-light text-xs my-3px opacity-70">{{ nextDays[index][0] }}</div>
@@ -29,6 +29,12 @@ const minimums = computed(() => store.state.minimums);
               stroke-width="3"/>
         <path id="min" :d="minimums" fill="none" stroke-linecap="round" stroke-linejoin="round"
               stroke-width="3"/>
+        <circle v-for="index of 15" :cx="maximums.split(' ')[index].split(',')[0]"
+                :cy="maximums.split(' ')[index].split(',')[1]"
+                class="maxDot" fill="none" r="3" stroke-width="2"/>
+        <circle v-for="index of 15" :cx="minimums.split(' ')[index].split(',')[0]"
+                :cy="minimums.split(' ')[index].split(',')[1]"
+                class="minDot" fill="none" r="3" stroke-width="2"/>
       </g>
     </svg>
   </div>
@@ -38,9 +44,14 @@ const minimums = computed(() => store.state.minimums);
 #chart {
   background-color: #FDFDFD;
   width: 1050px;
+  height: 80px;
 }
 
-#max, #min {
+#max, .maxDot {
   stroke: #A7D6F3
+}
+
+#min, .minDot {
+  stroke: rgba(#A7D6F3, 0.5)
 }
 </style>

@@ -30,6 +30,6 @@ const loadingStatus = computed(() => store.state.loadingStatus)
 
 <style lang="scss" scoped>
 #skycon {
-  font-family: "Kaiti SC", sans-serif;
+  font-family: 'DFKai-SB';
 }
 </style>

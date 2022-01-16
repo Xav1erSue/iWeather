@@ -11,9 +11,9 @@ const store = createStore({
 			updateTime: '',
 			weather: {},
 			AQIStyles: {},
-			curCity: '金华市',
+			curCity: '北京市',
 			loadingStatus: true,
-			baseWeatherLogo: '/weatherIcons/天气图标_晴天(白天).png',
+			baseWeatherLogo: '',
 			weatherLogos: [],
 			nextDays: [],
 			maximums: [],
@@ -37,16 +37,19 @@ const store = createStore({
 				dayjs(element.date).format('M.D'),
 				transWeekDay(dayjs(element.date).day()),
 			]);
-			const { maximums, minimums } = normalizeTemperature(weather.daily.temperature, 80);
-			const maxPoints = maximums.map(
-				(element, index) => `${50 + index * 100},${Math.round(element)}`
+			const { Maximums, Minimums } = normalizeTemperature(weather.daily.temperature, 40);
+			const maxPoints = Maximums.map(
+				(element, index) => `${50 + index * 100},${Math.round(element) + 45}`
 			);
-			const minPoints = minimums.map(
-				(element, index) => `${50 + index * 100},${Math.round(element)}`
+			const minPoints = Minimums.map(
+				(element, index) => `${50 + index * 100},${Math.round(element) + 35}`
 			);
-			state.maximums = `M${maxPoints.join(' ')}`;
-			state.minimums = `M${minPoints.join(' ')}`;
-			console.log(maximums, minimums);
+			state.maximums = `M0,${maxPoints[0].split(',')[1]} ${maxPoints.join(' ')} 1500,${
+				maxPoints[14].split(',')[1]
+			}`;
+			state.minimums = `M0,${minPoints[0].split(',')[1]} ${minPoints.join(' ')} 1500,${
+				minPoints[14].split(',')[1]
+			}`;
 		},
 		setCity(state, curCity) {
 			state.curCity = curCity;
