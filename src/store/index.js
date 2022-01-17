@@ -18,6 +18,9 @@ const store = createStore({
 			nextDays: [],
 			maximums: [],
 			minimums: [],
+			onSearch: false,
+			otherCities: [],
+			searchResponse: '',
 		};
 	},
 	mutations: {
@@ -59,6 +62,9 @@ const store = createStore({
 		},
 		setLoadingStatus(state, loadingStatus) {
 			state.loadingStatus = loadingStatus;
+		},
+		changeSearchStatus(state, status) {
+			store.state.onSearch = status;
 		},
 	},
 });
