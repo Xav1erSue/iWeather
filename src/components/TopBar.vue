@@ -16,7 +16,7 @@ const search = () => {
 
 <template>
   <div class="flex justify-between items-center py-10px text-lg text-[#A07954]">
-    <a class="mx-20px no-underline" href="https://xav1er.com">更多</a>
+    <a class="mx-20px no-underline" href="#">更多</a>
     <div class="mx-20px" @click="update">
       <div class="flex justify-center"><img class="w-16px" src="/logo/location.svg">{{ city }}</div>
       <div v-if="!loadingStatus" class="text-xs text-center">上次更新 {{ updateTime }}</div>

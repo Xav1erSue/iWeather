@@ -3,6 +3,7 @@ import { judgeAQIColor, judgeWeatherCon } from '../utils/judge';
 import dayjs from 'dayjs';
 import { transWeekDay } from '../utils/formatTool';
 import { normalizeTemperature } from '../utils/Normalize';
+import { getStorage } from '../utils/storage';
 
 const store = createStore({
 	state() {
@@ -19,8 +20,8 @@ const store = createStore({
 			maximums: [],
 			minimums: [],
 			onSearch: false,
-			otherCities: [],
 			searchResponse: '',
+			history: getStorage(),
 		};
 	},
 	mutations: {
