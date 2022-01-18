@@ -1,7 +1,21 @@
-# Vue 3 + Vite
+# :cloud: 一个天气app
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+> 使用`vite` + `Vue3.2`
+>
+> 更新日志: V1.1 新增查询记录
+>
+> 暂时挂载在字节轻服务平台：[iWeather](https://iweather.web.cloudendpoint.cn/)
+>
+> :iphone:目前仅支持手机端
 
-## Recommended IDE Setup
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+:construction: 现在已经有的功能：
+> 1. 显示实时天气
+> 
+> 2. 显示未来天气概览
+> 
+> 3. 显示未来15天天气预报
+> 
+> 4. 查找世界范围内的地区天气
+> 
+> 5. 查询记录
