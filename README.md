@@ -10,7 +10,7 @@
 
 暂时挂载在字节轻服务平台：[iWeather](https://iweather.web.cloudendpoint.cn/)
 
-:iphone:目前仅支持手机端
+:iphone:**目前仅支持手机端**
 
 ### :construction: 基本功能
 
