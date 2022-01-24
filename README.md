@@ -4,13 +4,13 @@
 
 ---
 
-> 使用`vite` + `Vue3.2` + `Vuex`
->
-> 更新日志: V1.5 修复字体显示bug
->
-> 暂时挂载在字节轻服务平台：[iWeather](https://iweather.web.cloudendpoint.cn/)
->
-> :iphone:目前仅支持手机端
+使用`vite` + `Vue3.2` + `Vuex`
+
+更新日志: V1.5 修复字体显示bug
+
+暂时挂载在字节轻服务平台：[iWeather](https://iweather.web.cloudendpoint.cn/)
+
+:iphone:目前仅支持手机端
 
 ### :construction: 基本功能
 
@@ -61,6 +61,14 @@
 └── README.md                   # 项目简介
 ```
 
+### :clapper: 运行环境参考
+
+---
+
+本地开发环境：`Npm 8.1.0`
+
+云端部署环境：`nginx/1.14.1`
+
 ### :hammer: 本地调试
 
 ---
@@ -73,7 +81,7 @@ npm run dev
 
 ---
 
-```
+```bash
 npm run build
 ```
 
