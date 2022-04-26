@@ -2,19 +2,15 @@
 
 ### :page_with_curl: 项目简介
 
----
-
 使用`vite` + `Vue3.2` + `Vuex`
 
 更新日志: V1.5 修复字体显示bug
 
-预览网站（仅支持移动端）：[iWeather](https://iweather.xav1er.com/)
+预览网站：[iWeather](https://iweather.xav1er.com/)
 
 :iphone:**目前仅支持手机端**
 
 ### :construction: 基本功能
-
----
 
 1. 显示实时天气
 2. 显示未来天气概览
@@ -23,8 +19,6 @@
 5. 查询记录
 
 ### :volcano: 项目结构
-
----
 
 ```
 ┌── dist                        # 项目打包构建后的输出目录
@@ -63,23 +57,17 @@
 
 ### :clapper: 运行环境参考
 
----
-
 本地开发环境：`Npm 8.1.0`
 
 云端部署环境：`nginx/1.14.1`
 
 ### :hammer: 本地调试
 
----
-
 ```bash
 npm run dev
 ```
 
 ### :cyclone: 构建项目
-
----
 
 ```bash
 npm run build
